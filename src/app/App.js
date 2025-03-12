@@ -28,12 +28,13 @@ const router =
       <Route path="/" element={<Root />}>
         {/* Add Routes here! */}
         <Route path="/about" element={<About />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:title" element={<Article />} />
-
         <Route path="/cateogries" element={<Categories />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />}>
+          <Route path="edit" element={<EditProfileForm />} />
+        </Route>
         <Route path="/authors" element={<Author />} />
         <Route path="/authors/:name" element={<Author />} />
       </Route>
